@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page LLC</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick-1.6.0/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <nav class="header-nav">
+
+                <span class="header-nav__icon">&#9776</span>
+                <ul class="header-nav-hidden">
+                    <li class="header-nav-hidden__item"><a href="#about">О нас</a></li>
+                    <li class="header-nav-hidden__item"><a href="#success">Успех</a></li>
+                    <li class="header-nav-hidden__item"><a href="#scope">Возможности</a></li>
+                    <li class="header-nav-hidden__item"><a href="#privileges">Привелегии </a></li>
+                    <li class="header-nav-hidden__item"><a href="#bace">Основа работы </a></li>
+                    <li class="header-nav-hidden__item"><a href="#principles">Принципы</a></li>
+                    <li class="header-nav-hidden__item"><a href="#team">Команда</a></li>
+                    <li class="header-nav-hidden__item"><a href="#contacts">Контакты</a></li>
+                    <li class="header-nav-hidden__icon">&#10006;</li>
+                </ul>
+            </nav>
+            <div class="logo">
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="438" height="265" viewBox="0 0 438 265"><g><g><image width="423" height="248" transform="translate(5)" xlink:href="data:image/png;base64,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"/></g></g></svg>
+            </div>
+            <h1 class="header-title">Мы одни из <span class="header-title__bg">лучших </span>специалистов<br> по применению <span class="header-title__bg">BTL-маркетинга</span></h1>
+
+            <a class="header__link" href="#">СВЯЖИТЕСЬ С НАМИ</a>
+
+        </div>
+    </header>
+    <main class="main">
+        <div class="wrapper">
+            <div class="main-text-title mod-margin-title">
+                <h2 class="main-text-title__title">
+                    <a name="about"> </a>о нашей компании</h2>
+                <p class="main-text-title__text">Компания занимается индивидуальным привлечением клиентов</p>
+            </div>
+            <div class="main-slider-article">
+                <div class="main-slider">
+                    <div class="single-item">
+                        <div>
+                            <img src="img/slides.png" alt="chair "></div>
+                        <div><img src="img/slides2.png" alt="room "></div>
+                        <div><img src="img/slides3.png" alt="chair "></div>
+                        <div><img src="img/slides4.png" alt="chair "></div>
+                    </div>
+                </div>
+                <article class="main-article ">
+                    <span class="main-article__title ">стратегия прямых продаж</span>
+                    <p class="main-article__text ">Luck Look Company – экономически эффективный канал привлечения клиентов для наших партнеров. Используемый нашей профессиональной командой комплекс маркетинговых коммуникаций позволяет эффективно контактировать с аудиторией на различных
+                        площадках. Таким образом наши партнеры получают только реальную клиентскую базу, состоящую из действительно заинтересованных лиц.
+                    </p>
+                    <span class="main-article__title mod-article__title ">Face-To-Face Marketing</span>
+                    <p class="main-article__text ">
+                        На сегодняшний день под Public Relations большинство людей понимают связь со СМИ. Однако стоит задуматься, что до целевой аудитории проще всего достучаться напрямую. Поэтому, если Вы хотите увеличить свою клиентскую базу наиболее экономичным и эффективным
+                        способом, то доверьте это команде Luck Look Company. Благодаря Face-To-Face маркетингу мы ежедневно общаемся с десятками тысяч людей из разных точек России. Это помогает нам проработать все целевые рынки страны и обеспечить приток
+                        сотен тысяч новых клиентов ежегодно.
+                    </p>
+                </article>
+            </div>
+            <div class="main-text-title mod-margin-title ">
+                <h2 class="main-text-title__title ">
+                    <a name="success"> </a>5 шагов к успеху в Luck Look Company</h2>
+                <p class="main-text-title__text ">Учись и шагай вместе с нами!</p>
+            </div>
+
+            <div class="main-service ">
+                <div class="main-service-column ">
+                    <div class="main-service-column-block-1">
+                        <div class="main-service-column-block-opacity-1 ">
+
+                            <div class="main-service-column-block-opacity-content-1 ">
+                                <p class="main-service-column-block-opacity-content__text-1 ">Станьте частью нашей команды, заполните заявку <br> и мы свяжемся с Вами в ближайшее время!</p>
+                                <a class="header__link-1" href="#">СВЯЖИТЕСЬ С НАМИ</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                   
+
+                </div>
+                <div class="main-service-column mod-service-column ">
+                    <div class="main-service-column-block ">
+                        <img class="main-service-column-block__down " src="img/layer2new.png" alt=" ">
+                        <div class="main-service-column-block-opacity ">
+                            <div class="main-service-column-block-opacity-content ">
+                                <span class="main-service-column-block-opacity-content__title ">Шаг первый</span>
+                                <p class="main-service-column-block-opacity-content__text ">Изучите основы ведения бизнеса в сфере продаж и в сфере предоставления услуг
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="main-service-column ">
+                    <div class="main-service-column-block mod-column-block ">
+                        <img class="main-service-column-block__down " src="img/layer3new.png" alt=" ">
+                        <div class="main-service-column-block-opacity ">
+                            <div class="main-service-column-block-opacity-content ">
+                                <span class="main-service-column-block-opacity-content__title ">шаг второй</span>
+                                <p class="main-service-column-block-opacity-content__text ">Научитесь правильно планировать и освойте методику развития личности
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="main-service-column mod-service-column ">
+                    
+                    <div class="main-service-column-block mod-column-block ">
+                        <img class="main-service-column-block__down " src="img/layer_3neww.png " alt=" ">
+                        <div class="main-service-column-block-opacity-2 ">
+                            <div class="main-service-column-block-opacity-content ">
+                                <span class="main-service-column-block-opacity-content__title ">Шаг третий</span>
+                                <p class="main-service-column-block-opacity-content__text ">Проучив важные навыки, станьте квалифицированным тренером и отличным мотиватором своей собственной команды</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main-service-column mod-service-column mod-service-column-margin ">
+                    <div class="main-service-column-block mod-column-block ">
+                        <img class="main-service-column-block__down " src="img/layer_4.png " alt=" ">
+                        <div class="main-service-column-block-opacity ">
+                            <div class="main-service-column-block-opacity-content ">
+                                <span class="main-service-column-block-opacity-content__title ">Шаг четвертый</span>
+                                <p class="main-service-column-block-opacity-content__text ">Узнайте, как запустить свой бизнес!
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="main-service-column ">
+                    <div class="main-service-column-block mod-column-block ">
+                        <img class="main-service-column-block__down " src="img/layer_6.png" alt=" ">
+                        <div class="main-service-column-block-opacity ">
+                            <div class="main-service-column-block-opacity-content ">
+                                <span class="main-service-column-block-opacity-content__title ">Шаг пятый</span>
+                                <p class="main-service-column-block-opacity-content__text ">Откройте собственную маркетинговую компанию и будучи руководителем используйте все полученные навыки и знания для успешного роста и развития своей компании
+                                </p>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+            
+
+
+
+
+
+
+
+            <div class="main-slider-down button-class ">
+                <div class="main-slider-1">
+                    <div class="single-item">
+                        <div>
+                            <img src="img/baba.png" alt="chair "></div>
+
+                    </div>
+                </div>
+
+                <div class="multiple-items antidot ">
+                    <div class="main-slider-down-block ">
+
+                        <div class="main-slider-down-block-wrap ">
+                            <span class="main-galery-column-block-comment__title ">Папедова Айна</span>
+                            <span class="main-galery-column-block-comment__mod-title ">/ Основатель Luck Look Company</span><br>
+                            <p class="main-slider-down__text ">
+                                Меня всегда тянуло общаться с людьми, прям постоянно. В 27 лет решила, что пора что-то менять в своей жизни и именно сегодня, а не потом. Пришла в компанию, поняла, что она дает реальные возможности, которые легко достичь. Мне помогли мои позитивные взгляды
+                                на жизнь, усилие и усердие, не просто же так я их столько копила. Через полтора года мне предоставилась возможность вести свой собственный бизнес с самой крутой командой. Наш бизнес – это бизнес людей! Наш бизнес – это
+                                бизнес для людей! Я не жалею о том, что сделала такой шаг и круто повернула свою судьбу. Если хотите поменять что-то у себя в жизни, меняйте, не стойте на месте и двигайтесь только в перед!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-slider-down-block ">
+
+                        <div class="main-slider-down-block-wrap ">
+                            <span class="main-galery-column-block-comment__title ">Папедова Айна</span>
+                            <span class="main-galery-column-block-comment__mod-title ">/ Основатель Luck Look Company</span><br>
+                            <p class="main-slider-down__text ">
+                                На самом деле, вся эта тяга к продажам и общению с людьми началась с самого детства. Любила проводить различные конкурсы, разыгрывать сценки и многое другое. В общем, была очень активным ребенком, родители же у меня консервативных взглядов. После школы
+                                у меня была мечта поступить в Театральный университет, потому что всегда любила сцену и играть роли. Жаль, но тогда родители сказали: «Нет, за этим нет будущего!». Так и рухнула моя театральная мечта. Поступила я в МВД
+                                и успешно окончила его. Пыталась даже работать по специальности, но не сложилось. Слишком много идей было в моей голове.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div>
+                <h2 class="main-text-title__title-4 ">
+                    <a name="scope"> Ваши возможности в Luck Look Company
+
+                </h2>
+                <p class="main-text-title__text-4 ">Наша команда заинтересована в привлечении единомышленников,<br> поэтому мы предлагаем максимально комфортные и эффективные условия работы.
+                </p>
+
+                <div class="counteiner">
+                    <div class="blog">
+                        <span>
+							Тимбилдинг 
+					</span>
+                        <p>
+                            «Талант выигрывает в играх, командная работа и интеллект выигрывают в чемпионатах!» - именно поэтому одним из ключевых факторов роста и успеха Luck Look Company являются наши сотрудники. Вам будет непременно оказана помощь опытных наставников и активная
+                            поддержка руководства компании, которая позволяет новым сотрудникам правильно выстроить свой личный рабочий процесс и дает возможность добиваться прогресса в своей деятельности. Для нас важен каждый игрок нашей команды!
+                        </p>
+                    </div>
+
+                    <div class="blog">
+                        <span>
+							
+							Профессионализм
+								
+								
+							</span>
+                        <p>
+
+                            Инициативные и нацеленные на успех люди благодаря нам получают возможность построить свой успешный бизнес, главным аспектом которого является продвижение товаров и услуг для крупных клиентов. Мы выработали свою формулу успеха, которая позволяет нам быть
+                            всегда впереди наших конкурентов. Присоединяйся к нам!
+                        </p>
+                    </div>
+
+                    <div class="blog">
+                        <span>
+						
+							команда
+							
+							</span>
+                        <p>
+
+                            Все успешные кандидаты, принятые в компанию, начинают свою карьеру с одинаковой позиции, им оказывается равноценная поддержка и предоставляется возможность пройти наш базовый курс обучения. Благодаря команде единомышленников и профессионалов мы достигаем
+                            выдающихся результатов.
+                        </p>
+                    </div>
+
+                    <div class="blog">
+                        <span>
+							Самосовершенствование 
+
+						
+							
+					</span>
+                        <p>
+                            Мы постоянно работаем над собой и ежедневно концентрируемся на скорейшем выполнении поставленных целей. Этот процесс является необходимым и основным не только для компании, но и для достижения личностного успеха!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+                <h2 class="main-text-title__title-5 ">
+                    <a name="privileges"> Мы предоставляем нашим сотрудникам
+                </h2>
+                <p class="main-text-title__text-5 ">доступ к уникальным мероприятиям и различным видам <br>профессиональной деятельности
+                </p>
+            </div>
+
+
+
+
+            <div class="conteiner-kappa">
+                <div class="KappaPride">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" width="81">
+							<g>
+							  <path fill="#6df6eb" d="m429.2,82.8c-46.2-46.3-107.8-71.8-173.2-71.8s-127,25.5-173.2,71.8-71.8,107.8-71.8,173.2 25.5,127 71.8,173.2 107.8,71.8 173.2,71.8 127-25.5 173.2-71.8 71.8-107.8 71.8-173.2-25.5-127-71.8-173.2zm49.6,162.2h-95c-0.9-37.8-6.2-74.2-15.5-106.5 18.1-9.3 35-21 50.5-34.8 35,37.4 57.3,86.8 60,141.3zm-211.8,22h94.9c-0.8,34.8-5.6,68.1-13.9,97.9-25.6-10.3-52.9-16.3-81-17.6v-80.3zm136-178.6c-12.8,11.3-26.8,20.9-41.6,28.9-3.8-10.6-8.1-20.6-12.9-30-9.5-18.8-20.3-34.2-32.2-46 32.5,9.1 62,25.4 86.7,47.1zm-136-52c22.9,5.1 44.5,26.2 61.9,60.6 4.7,9.3 8.9,19.2 12.6,29.7-23.5,9.7-48.6,15.4-74.5,16.7v-107zm81.1,111.4c8.2,29.6 12.9,62.7 13.7,97.3h-94.8v-79.6c28.2-1.3 55.5-7.4 81.1-17.7zm-103.1,97.2h-94.9c0.8-34.6 5.5-67.7 13.7-97.3 25.6,10.4 53,16.4 81.1,17.6v79.7zm.1-208.6v107c-25.9-1.3-51.1-7-74.5-16.7 3.7-10.5 7.9-20.4 12.6-29.7 17.4-34.4 39-55.5 61.9-60.6zm-49.3,4.9c-11.9,11.8-22.7,27.3-32.2,46-4.7,9.4-9,19.4-12.9,30-14.8-8-28.7-17.6-41.6-28.9 24.7-21.7 54.2-38 86.7-47.1zm-102.5,62.4c15.5,13.8 32.4,25.4 50.5,34.8-9.3,32.4-14.7,68.7-15.5,106.5h-95c2.7-54.5 25-103.9 60-141.3zm-60,163.3h95c0.9,38.1 6.3,74.6 15.7,107.1-18,9.3-34.9,20.8-50.3,34.6-35.3-37.5-57.7-87-60.4-141.7zm76.2,157c12.8-11.2 26.7-20.8 41.4-28.7 3.8,10.3 8,20.2 12.7,29.4 9.5,18.8 20.3,34.2 32.2,46.1-32.3-9.1-61.7-25.3-86.3-46.8zm135.6,51.6c-22.9-5.1-44.5-26.2-61.9-60.6-4.6-9.1-8.7-18.8-12.4-29.1 23.4-9.7 48.5-15.4 74.3-16.6v106.3zm-81-110.7c-8.3-29.8-13.1-63.1-13.9-97.9h94.9v80.3c-28.1,1.2-55.4,7.2-81,17.6zm103,110.7v-106.3c25.8,1.3 50.9,6.9 74.3,16.6-3.7,10.3-7.8,20-12.4,29.1-17.4,34.4-39,55.5-61.9,60.6zm49.3-4.9c11.9-11.8 22.7-27.3 32.2-46.1 4.7-9.2 8.9-19.1 12.7-29.4 14.7,7.9 28.6,17.5 41.4,28.7-24.6,21.6-54,37.8-86.3,46.8zm102.2-62c-15.4-13.7-32.3-25.3-50.3-34.6 9.4-32.5 14.8-69.1 15.7-107.1h95c-2.8,54.7-25.2,104.2-60.4,141.7z"/>
+							</g>
+						  </svg>
+
+                    <p>
+                        Участие в международных <br>семинарах
+                    </p>
+                </div>
+
+                <div class="KappaPride">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" width="81">
+							<g>
+							  <g fill="#6df6eb">
+								<path d="m490.6,113.7h-106.5c-9.9-25.8-34.8-43-62.5-43h-17.4c-4.8-22.2-24.6-38.9-48.2-38.9-23.6,0-43.4,16.7-48.2,38.9h-17.4c-27.7,0-52.6,17.2-62.5,43h-106.5c-5.8,0-10.4,4.7-10.4,10.4v345.7c0,5.8 4.7,10.4 10.4,10.4h469.1c5.8,0 10.4-4.7 10.4-10.4v-345.7c0.1-5.8-4.6-10.4-10.3-10.4zm-343.5,8.2c6.6-18.2 24-30.4 43.3-30.4h26.7c5.8,0 10.4-4.7 10.4-10.4 0-15.7 12.8-28.5 28.5-28.5 15.7,0 28.5,12.8 28.5,28.5 0,5.8 4.7,10.4 10.4,10.4h26.7c19.3,0 36.7,12.2 43.3,30.4l8.2,22.8h-234.3l8.3-22.8zm333,337.5h-448.2v-324.9h88.5l-6.2,17c-2.8,10.5 6.4,14 9.8,14h264c11.1-1 11.4-10.7 9.8-14l-6.2-17h88.5v324.9z"/>
+								<path d="m150.5,284.4c27.5,0 49.9-22.4 49.9-49.9 0-27.5-22.4-49.9-49.9-49.9s-49.9,22.4-49.9,49.9c-0.1,27.5 22.3,49.9 49.9,49.9zm0-79c16,0 29.1,13 29.1,29.1 0,16-13,29.1-29.1,29.1-16,0-29.1-13-29.1-29.1 0-16 13-29.1 29.1-29.1z"/>
+								<path d="m150.5,291.2c-59.4,0-107.7,48.3-107.7,107.7 0,5.8 4.7,10.4 10.4,10.4h194.5c5.8,0 10.4-4.7 10.4-10.4 0.1-59.4-48.3-107.7-107.6-107.7zm-86.3,97.3c5.2-43 41.9-76.4 86.2-76.4 44.4,0 81.1,33.4 86.2,76.4h-172.4z"/>
+								<path d="m277.3,248.4c0,5.8 4.7,10.4 10.4,10.4h161.5c5.8,0 10.4-4.7 10.4-10.4s-4.6-10.4-10.3-10.4h-161.6c-5.7,0-10.4,4.6-10.4,10.4z"/>
+								<path d="m449.3,335.1h-161.6c-5.8,0-10.4,4.7-10.4,10.4 0,5.8 4.7,10.4 10.4,10.4h161.5c5.8,0 10.4-4.7 10.4-10.4 0.1-5.7-4.6-10.4-10.3-10.4z"/>
+							  </g>
+							</g>
+						  </svg>
+                    <p>
+                        Участие в уникальных <br>программах развития
+
+                    </p>
+
+
+                </div>
+
+                <div class="KappaPride">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496.941 496.941" style="enable-background:new 0 0 496.941 496.941;" xml:space="preserve" width="81">
+				   <g>
+					   <g>
+						   <g fill="#6df6eb">
+							   <path d="M266.541,243.2h-36.894c-34.635,0-63.247,28.612-63.247,63.247v25.6c0,4.518,3.012,7.529,7.529,7.529h148.329
+								   c4.518,0,7.529-3.012,7.529-7.529v-25.6C329.788,271.812,301.929,243.2,266.541,243.2z M315.482,324.518h-0.753H182.212v-18.071
+								   c0-26.353,21.835-48.188,48.188-48.188h36.894c26.353,0,48.188,21.835,48.188,48.188V324.518z"/>
+							   <path d="M248.471,241.694c27.106,0,49.694-22.588,49.694-49.694c0-27.106-22.588-49.694-49.694-49.694
+								   S198.776,164.894,198.776,192S221.365,241.694,248.471,241.694z M248.471,157.365c18.824,0,34.635,15.812,34.635,34.635
+								   s-15.812,34.635-34.635,34.635S213.835,210.824,213.835,192S229.647,157.365,248.471,157.365z"/>
+							   <path d="M465.318,216.847c-14.306,0-27.106,9.788-30.118,24.094h-35.388c-1.506-36.141-16.565-69.271-39.153-94.118
+								   l24.847-24.847c12.8,7.529,28.612,5.271,38.4-4.518c12.047-12.047,12.047-32.376,0-44.424s-32.376-12.047-44.424,0
+								   c-9.788,9.788-12.047,25.6-4.518,38.4l-24.847,24.847C325.271,113.694,292.141,99.388,256,97.129V61.741
+								   c13.553-3.765,24.094-15.812,24.094-30.118C280.094,14.306,265.788,0,248.471,0s-31.624,14.306-31.624,31.624
+								   c0,14.306,9.788,27.106,24.094,30.118v35.388c-36.141,1.506-69.271,16.565-94.118,39.153l-24.847-24.847
+								   c7.529-12.047,6.024-27.859-4.518-38.4c-12.047-12.047-32.376-12.047-44.424,0s-12.047,32.376,0,44.424
+								   c9.788,9.788,25.6,12.047,38.4,4.518l24.847,24.847c-22.588,24.847-36.894,57.977-39.153,94.118H61.741
+								   c-3.765-13.553-15.812-24.094-30.118-24.094C14.306,216.847,0,231.153,0,248.471s14.306,31.624,31.624,31.624
+								   c14.306,0,27.106-9.788,30.118-24.094h35.388c1.506,36.141,16.565,69.271,39.153,94.118l-24.847,24.847
+								   c-12.8-7.529-28.612-5.271-38.4,4.518c-12.047,12.047-12.047,32.376,0,44.424c12.047,12.047,31.624,12.047,44.424,0
+								   c10.541-10.541,12.047-26.353,4.518-38.4l24.847-24.847c24.847,22.588,57.977,36.894,94.118,39.153V435.2
+								   c-13.553,3.765-24.094,15.812-24.094,30.118c0,17.318,14.306,31.623,31.624,31.623c17.318,0,31.624-14.306,31.624-31.624
+								   c0-14.306-9.788-27.106-24.094-30.118v-35.388c36.141-1.506,69.271-16.565,94.118-39.153l24.847,24.847
+								   c-7.529,12.8-5.271,28.612,4.518,38.4c12.047,12.047,31.624,12.047,44.424,0c12.047-12.047,12.047-32.376,0-44.424
+								   c-9.788-9.788-25.6-12.047-38.4-4.518l-24.847-24.847c22.588-24.847,36.894-57.977,39.153-94.118H435.2
+								   c3.765,13.553,15.812,24.094,30.118,24.094c17.318,0,31.623-14.306,31.623-31.624
+								   C496.941,231.153,482.635,216.847,465.318,216.847z M390.776,83.576c6.023-6.024,16.565-6.024,22.588,0
+								   c6.024,6.023,6.024,16.565,0,22.588c-6.023,6.024-16.565,6.024-22.588,0C384,100.141,384,89.6,390.776,83.576z M106.165,106.165
+								   c-6.023,6.024-16.565,6.024-22.588,0c-6.024-6.023-6.024-16.565,0-22.588c6.023-6.024,16.565-6.024,22.588,0
+								   C112.188,89.6,112.188,100.141,106.165,106.165z M31.624,265.035c-9.035,0-16.565-7.529-16.565-16.565
+								   s7.529-16.565,16.565-16.565s16.565,7.529,16.565,16.565S39.906,265.035,31.624,265.035z M106.165,413.365
+								   c-6.023,6.024-16.565,6.024-22.588,0c-6.024-6.023-6.024-16.565,0-22.588c6.023-6.024,16.565-6.024,22.588,0
+								   C112.941,396.8,112.941,407.341,106.165,413.365z M390.776,390.776c3.012-3.012,6.776-4.518,11.294-4.518
+								   c4.518-0.753,8.282,1.506,11.294,4.518c6.024,6.023,6.024,16.565,0,22.588c-6.023,6.024-16.565,6.024-22.588,0
+								   C384.753,407.341,384.753,396.8,390.776,390.776z M231.906,31.624c0-9.035,7.529-16.565,16.565-16.565
+								   s16.565,7.529,16.565,16.565s-7.529,16.565-16.565,16.565S231.906,39.906,231.906,31.624z M265.035,465.318
+								   c0,9.035-7.529,16.565-16.565,16.565s-16.565-7.529-16.565-16.565s7.529-16.565,16.565-16.565S265.035,457.035,265.035,465.318z
+									M248.471,384.753c-75.294,0-136.282-60.988-136.282-136.282s60.988-136.282,136.282-136.282s136.282,60.988,136.282,136.282
+								   S323.765,384.753,248.471,384.753z M465.318,265.035c-9.035,0-16.565-7.529-16.565-16.565s7.529-16.565,16.565-16.565
+								   c9.035,0,16.565,7.529,16.565,16.565S474.353,265.035,465.318,265.035z"/>
+						   </g>
+					   </g>
+				   </g>
+				   
+				   </svg>
+
+                    <p>
+                        Участие в корпоративных <br>мероприятиях и тимбилдинге
+
+                    </p>
+                </div>
+
+
+                <div class="KappaPride">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 497.694 497.694" style="enable-background:new 0 0 497.694 497.694;" xml:space="preserve" width="81">
+<g>
+	<g>
+		<g fill="#6df6eb">
+			<path d="M186.721,183.718h124.235c6.023,0,11.294-5.271,11.294-11.294v-21.082c0-32.376-25.6-58.729-57.224-60.988
+				c17.318-6.776,29.365-24.094,29.365-43.671c0-25.6-21.082-46.682-46.682-46.682s-46.682,21.082-46.682,46.682
+				c0,19.576,12.047,36.894,29.365,43.671c-30.871,3.012-54.965,29.365-54.965,60.988v21.082
+				C175.426,178.447,180.697,183.718,186.721,183.718z M216.085,46.682c0-17.318,14.306-31.624,31.624-31.624
+				c17.318,0,31.624,14.306,31.624,31.624c0,17.318-14.306,31.623-31.624,31.623C230.391,78.306,216.085,64,216.085,46.682z
+				 M190.485,151.341c0-25.6,20.329-45.929,45.929-45.929h25.6c25.6,0,45.929,20.329,45.929,45.929v17.318H190.485V151.341z"/>
+			<path d="M87.332,408.094c15.812-6.776,27.106-22.588,27.106-40.659c0-24.847-20.329-44.424-45.176-44.424
+				s-45.176,20.329-45.176,44.424c0,18.823,11.294,34.635,27.859,41.412c-28.612,3.765-51.2,29.365-51.2,59.482v17.318
+				c0,6.024,5.271,11.294,11.294,11.294h117.459c6.024,0,11.294-5.271,11.294-11.294v-17.318
+				C140.791,437.459,117.45,411.859,87.332,408.094z M39.897,366.682c0-16.565,13.553-29.365,30.118-29.365
+				s30.118,13.553,30.118,29.365c0,15.812-13.553,29.365-30.118,29.365S39.897,383.247,39.897,366.682z M125.732,481.882H15.803
+				v-13.553c0-25.6,20.329-45.929,45.929-45.929h18.071c25.6,0,45.929,20.329,45.929,45.929V481.882z"/>
+			<path d="M265.779,408.094c15.812-6.776,27.106-22.588,27.106-40.659c0-24.847-20.329-44.424-45.176-44.424
+				c-24.847,0-45.177,20.329-45.177,44.424c0,18.823,11.294,34.635,27.859,41.412c-29.365,4.518-51.953,29.365-51.953,60.235V486.4
+				c0,6.024,5.271,11.294,11.294,11.294h117.459c6.023,0,11.294-5.271,11.294-11.294v-17.318
+				C319.238,437.459,295.897,411.859,265.779,408.094z M218.344,366.682c0-16.565,13.553-29.365,30.118-29.365
+				c16.565,0,30.118,13.553,30.118,29.365c0,15.812-13.553,29.365-30.118,29.365S218.344,383.247,218.344,366.682z M304.179,481.882
+				H194.25v-13.553c0-25.6,20.329-45.929,45.929-45.929h18.071c25.6,0,45.929,20.329,45.929,45.929V481.882z"/>
+			<path d="M444.226,408.094c15.812-6.776,27.106-22.588,27.106-40.659c0-24.847-20.329-44.424-45.177-44.424
+				s-45.176,20.329-45.176,44.424c0,18.823,11.294,34.635,27.859,41.412c-29.365,4.518-51.953,29.365-51.953,60.235V486.4
+				c0,6.024,5.271,11.294,11.294,11.294h117.459c6.024,0,11.294-5.271,11.294-11.294v-17.318
+				C497.685,437.459,474.344,411.859,444.226,408.094z M396.791,366.682c0-16.565,13.553-29.365,30.118-29.365
+				s30.118,13.553,30.118,29.365c0,15.812-13.553,29.365-30.118,29.365S396.791,383.247,396.791,366.682z M482.626,481.882H372.697
+				v-13.553c0-25.6,20.329-45.929,45.929-45.929h18.071c25.6,0,45.929,20.329,45.929,45.929V481.882z"/>
+			<path d="M71.521,306.447c4.518,0,7.529-3.012,7.529-7.529V243.2h162.635v55.718c0,4.518,3.012,7.529,7.529,7.529
+				s7.529-3.012,7.529-7.529V243.2h162.635v55.718c0,4.518,3.012,7.529,7.529,7.529s7.529-3.012,7.529-7.529v-63.247
+				c0-4.518-3.012-7.529-7.529-7.529H256.744v-24.094c0-4.518-3.012-7.529-7.529-7.529s-7.529,3.012-7.529,7.529v24.094H71.521
+				c-4.518,0-7.529,3.012-7.529,7.529v63.247C63.991,303.435,67.003,306.447,71.521,306.447z"/>
+		</g>
+	</g>
+</g>
+
+</svg>
+
+
+
+
+                    <p>
+                        Доступ к глобальной <br>базе данных
+
+                    </p>
+                </div>
+                <div class="KappaPride">
+
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" width="81">
+                        <g>
+                          <g fill="#6df6eb">
+                            <path d="m152.4,31.2h-131c-5.8,0-10.4,4.7-10.4,10.4v428.8c0,5.8 4.7,10.4 10.4,10.4h131c5.8,0 10.4-4.7 10.4-10.4v-428.8c0-5.8-4.6-10.4-10.4-10.4zm-10.4,428.8h-110.1v-408h110.1v408z"/>
+                            <path d="m86.9,416.7c21.6,0 39.1-17.6 39.1-39.1 0-21.6-17.6-39.1-39.1-39.1-21.6,0-39.1,17.6-39.1,39.1-7.10543e-15,21.5 17.5,39.1 39.1,39.1zm0-57.5c10.1,0 18.3,8.2 18.3,18.3 0,10.1-8.2,18.3-18.3,18.3s-18.3-8.2-18.3-18.3c-1.42109e-14-10.1 8.2-18.3 18.3-18.3z"/>
+                            <path d="m58.2,116.2h57.4c5.8,0 10.4-4.7 10.4-10.4s-4.7-10.4-10.4-10.4h-57.4c-5.8,0-10.4,4.7-10.4,10.4s4.6,10.4 10.4,10.4z"/>
+                            <path d="M58.2,173.6h57.4c5.8,0,10.4-4.7,10.4-10.4c0-5.8-4.7-10.4-10.4-10.4H58.2c-5.8,0-10.4,4.7-10.4,10.4    C47.8,169,52.4,173.6,58.2,173.6z"/>
+                            <path d="m321.5,31.2h-131c-5.8,0-10.4,4.7-10.4,10.4v428.8c0,5.8 4.7,10.4 10.4,10.4h131c5.8,0 10.4-4.7 10.4-10.4v-428.8c0-5.8-4.7-10.4-10.4-10.4zm-10.4,428.8h-110.2v-408h110.1v408z"/>
+                            <path d="m256,416.7c21.6,0 39.1-17.6 39.1-39.1 0-21.6-17.6-39.1-39.1-39.1-21.6,0-39.2,17.6-39.2,39.1 0,21.5 17.6,39.1 39.2,39.1zm0-57.5c10.1,0 18.3,8.2 18.3,18.3 0,10.1-8.2,18.3-18.3,18.3-10.1,0-18.3-8.2-18.3-18.3 0-10.1 8.2-18.3 18.3-18.3z"/>
+                            <path d="m227.3,116.2h57.4c5.8,0 10.4-4.7 10.4-10.4s-4.7-10.4-10.4-10.4h-57.4c-5.8,0-10.4,4.7-10.4,10.4s4.6,10.4 10.4,10.4z"/>
+                            <path d="m227.3,173.6h57.4c5.8,0 10.4-4.7 10.4-10.4 0-5.8-4.7-10.4-10.4-10.4h-57.4c-5.8,0-10.4,4.7-10.4,10.4-0.1,5.8 4.6,10.4 10.4,10.4z"/>
+                            <path d="m490.6,31.2h-131c-5.8,0-10.4,4.7-10.4,10.4v428.8c0,5.8 4.7,10.4 10.4,10.4h131c5.8,0 10.4-4.7 10.4-10.4v-428.8c0-5.8-4.7-10.4-10.4-10.4zm-10.5,428.8h-110.1v-408h110.1v408z"/>
+                            <path d="m425.1,416.7c21.6,0 39.1-17.6 39.1-39.1 0-21.6-17.6-39.1-39.1-39.1s-39.1,17.6-39.1,39.1c-0.1,21.5 17.5,39.1 39.1,39.1zm0-57.5c10.1,0 18.3,8.2 18.3,18.3 0,10.1-8.2,18.3-18.3,18.3-10.1,0-18.3-8.2-18.3-18.3 0-10.1 8.2-18.3 18.3-18.3z"/>
+                            <path d="m396.4,116.2h57.4c5.8,0 10.4-4.7 10.4-10.4s-4.7-10.4-10.4-10.4h-57.4c-5.8,0-10.4,4.7-10.4,10.4s4.6,10.4 10.4,10.4z"/>
+                            <path d="m396.4,173.6h57.4c5.8,0 10.4-4.7 10.4-10.4 0-5.8-4.7-10.4-10.4-10.4h-57.4c-5.8,0-10.4,4.7-10.4,10.4-0.1,5.8 4.6,10.4 10.4,10.4z"/>
+                          </g>
+                        </g>
+                      </svg>
+
+                    <p>
+
+
+
+
+                        Доступ к развитой <br>системе наставничества
+                    </p>
+                </div>
+                <div class="KappaPride">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" width="81">
+                        <g>
+                          <path fill="#6df6eb" d="m490.6,158.7h-62.6v-38.7c0-5.8-4.7-10.4-10.4-10.4h-223.2l-26.9-56.1c-1.7-3.6-5.4-5.9-9.4-5.9h-136.7c-5.8,0-10.4,4.7-10.4,10.4v396.2c0.3,8.7 8.3,10.7 10.4,10.4h396.2c4.8,0 8.9-3.2 10.1-7.8l73-285c1.5-3.7-0.9-12.9-10.1-13.1zm-458.7-90.4h119.6l26.9,56.1c1.7,3.6 5.4,5.9 9.4,5.9h219.4v28.3h-312.8c-4.8,0-8.9,3.2-10.1,7.8l-52.4,204.9v-303zm377.6,375.4h-374.6l67.6-264.1h374.6l-67.6,264.1z"/>
+                        </g>
+                      </svg>
+
+
+                    <p>
+                        Участие в тренингах
+                    </p>
+                </div>
+            </div>
+           
+            <div>
+                <h2 class="main-text-title__title-6 ">
+                    <a name="bace">  Основа нашей работы
+
+                </h2>
+                <p class="main-text-title__text-6 ">доступ к уникальным мероприятиям и различным видам <br> профессиональной деятельности
+
+                </p>
+            </div>
+
+
+            <div class="block-button">
+                <div class="main-service-column-2 mod-service-column-2">
+                    <div class="main-service-column-block">
+                        <img class="main-service-column-block__down" src="img/osnova_1.png" alt="">
+                        <div class="main-service-column-block-opacity">
+                            <div class="main-service-column-block-opacity-content-k">
+                                <span class="main-service-column-block-opacity-content__title-2">Прямые продажи</span>
+                                <div class="main-service-column-block-opacity-content__link">
+                                    <span>
+                                        
+                                        Подробнее
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-service-column-block-popup">
+                            <div class="main-service-column-block-popup-content">
+
+                                <p class="main-service-column-block-popup-content__text-1">Мы разработали уникальную, ориентированную на результат, стратегию прямых продаж. Ее отличная результативность снова и снова доказывает, что компания Luck Look Company - экономически эффективный канал привлечения клиентов
+                                    для наших партнеров.</p>
+                                <div class="main-service-column-block-popup-content__icon">&#10006;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main-service-column-2 mod-service-column-2">
+                    <div class="main-service-column-block">
+                        <img class="main-service-column-block__down" src="img/osnova_2.png" alt="">
+                        <div class="main-service-column-block-opacity">
+                            <div class="main-service-column-block-opacity-content-k">
+                                <span class="main-service-column-block-opacity-content__title-2">Реальные клиенты</span>
+                                <div class="main-service-column-block-opacity-content__link"><span>
+                                        
+                                        Подробнее
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-service-column-block-popup">
+                            <div class="main-service-column-block-popup-content">
+
+                                <p class="main-service-column-block-popup-content__text-1">Мы разработали уникальную, ориентированную на результат, стратегию прямых продаж. Ее отличная результативность снова и снова доказывает, что компания Luck Look Company - экономически эффективный канал привлечения клиентов
+                                    для наших партнеров.</p>
+                                <div class="main-service-column-block-popup-content__icon">&#10006;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="main-service-column-2 mod-service-column-2">
+                    <div class="main-service-column-block">
+                        <img class="main-service-column-block__down" src="img/osnova_3.png" alt="">
+                        <div class="main-service-column-block-opacity">
+                            <div class="main-service-column-block-opacity-content-k">
+                                <span class="main-service-column-block-opacity-content__title-2">наши решения 
+                                    вашего бизнеса</span>
+
+                                <div class="main-service-column-block-opacity-content__link">
+                                    <div class="main-service-column-block-opacity-content__link"><span>
+                                        
+                                            Подробнее
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-service-column-block-popup">
+                            <div class="main-service-column-block-popup-content">
+                                <ul>
+                                    <li>Высокая узнаваемость бренда</li>
+                                    <li>Отличный сервис</li>
+                                    <li>Гарантированный возврат инвестиций</li>
+                                    <li>Доступ к целевой рыночной аудитории</li>
+                                    <li>Индивидуальный подход к решению проблем клиентов</li>
+                                    <li>Эффективность затрат</li>
+                                    <li>«Бизнес о людях»</li>
+                                </ul>
+                                <div class="main-service-column-block-popup-content__icon">&#10006;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        
+
+            <div>
+                <h2 class="main-text-title__title-6 ">
+                    <a name="principles"> Ключевые факторы успеха
+
+
+                </h2>
+                <p class="main-text-title__text-7 ">Успех каждой компании может определять множество разнообразных факторов и подходов к работе. Luck Look Company выявила свою собственную уникальную формулу успеха, состоящую из трех принципов.
+
+
+                </p>
+            </div>
+            <div class="main-slider-down hg">
+                <div class="multiple-items">
+                    <div class="main-slider-down-block hf">
+                        <div class="main-slider-down__img">
+                            <img src="img/prin1.png" alt="women">
+                        </div>
+                        <div class="main-slider-down-block-wrap-1">
+                            <span class="main-galery-column-block-comment__title-1">Принцип первый. Команда </span>
+
+                            <p class="main-slider-down__text-4">
+                                Важнейшим фактором успеха компании является формирование здоровых и эффективных отношений между сотрудниками. Мы отводим большую роль разработке и применению актуальных и прогрессивных методов формирования команды. Регулярное проведение тимбилдингов помогает
+                                устанавливать доверительные и здоровые отношения в коллективе, делает его более сплоченным, а, значит, сильно повышает эффективность работы компании в целом.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-slider-down-block hf">
+                        <div class="main-slider-down__img">
+                            <img src="img/prin2.png" alt="women">
+                        </div>
+                        <div class="main-slider-down-block-wrap-1">
+                            <span class="main-galery-column-block-comment__title-1">Принцип второй. Метод работы
+                                    </span>
+
+                            <p class="main-slider-down__text-4">
+                                Многие крупные компании предлагают услуги прямого маркетинга, пытаясь угодить каждому запросу. Luck Look Company выигрывает у них в том, что специализируется исключительно на BTL-маркетинге, что позволяет показывать наиболее высокие результаты в том числе
+                                за счет особой системы обучения сотрудников.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="main-slider-down-block hf">
+                        <div class="main-slider-down__img">
+                            <img src="img/prin3.png" alt="women">
+                        </div>
+                        <div class="main-slider-down-block-wrap-1">
+                            <span class="main-galery-column-block-comment__title-1">Принцип третий. Перспективы
+                                </span>
+
+                            <p class="main-slider-down__text-4">
+                                Luck Look Company является молодой и положительно зарекомендовавшей себя организацией, которая каждый год показывает отличные результаты, получая положительные отзывы от своих клиентов. Активно обходя своих конкурентов, мы стремимся занять первое место
+                                среди уникальных маркетинговых компаний и имеем для этого все необходимые ресурсы.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="main-text-title mod-margin-title ">
+                <h2 class="main-text-title__title-3">
+                    <a name="team"> </a>познакомьтесь с нашей командой</h2>
+
+            </div>
+            <div class="main-galery ">
+
+                <div class="main-galery-column-block ">
+                    <img class="main-galery-column-block__img " src="img/pak.png " alt="women ">
+                    <div class="main-galery-column-block-comment ">
+                        <span class="main-galery-column-block-comment__title ">Айна Папедова </span>
+                        <span class="main-galery-column-block-comment__mod-title ">/ <br>Директор компании LLC</span>
+                        <p class="main-galery-column-block-comment__text ">
+                            Уверена, что в мире много добрых людей. Всегда добиваюсь поставленных целей. Генерирую, управляю, мотивирую!
+                        </p>
+
+                    </div>
+                </div>
+                <div class="main-galery-column-block ">
+                    <img class="main-galery-column-block__img " src="img/MARUKhINA.png " alt="women ">
+                    <div class="main-galery-column-block-comment ">
+                        <span class="main-galery-column-block-comment__title ">Дарья Марухина </span>
+                        <span class="main-galery-column-block-comment__mod-title ">/<br> Ведущий лидер команды</span>
+                        <p class="main-galery-column-block-comment__text ">
+                            Обожаю людей и общение с ними. Люблю танцевать и часто менять имидж. А ещё я скорпион, и тут без лишних фраз!
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="main-galery-column-block ">
+                    <img class="main-galery-column-block__img " src="img/BLIZNETsOV.png " alt="women ">
+                    <div class="main-galery-column-block-comment ">
+                        <span class="main-galery-column-block-comment__title ">Леонид Близнецов </span>
+                        <span class="main-galery-column-block-comment__mod-title ">/ <br>Ведущий лидер команды</span>
+                        <p class="main-galery-column-block-comment__text ">
+                            Работал в полиции, однако ушёл, потому что хочу творить добро. С лёгкостью удаётся собрать команду на любой тимбилдиг.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="main-galery-column-block ">
+                    <img class="main-galery-column-block__img " src="img/BORISOV.png " alt="women ">
+                    <div class="main-galery-column-block-comment ">
+                        <span class="main-galery-column-block-comment__title ">Борисов Игорь </span>
+                        <span class="main-galery-column-block-comment__mod-title ">/<br> Лидер</span>
+                        <p class="main-galery-column-block-comment__text ">
+                            Общительный парень, найду язык с любым человеком.<br> Гений SMM-маркетинга (без лишней лести), креатив мое все!
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="main-galery-column-block ">
+                    <img class="main-galery-column-block__img " src="img/ShMEL.png " alt="women ">
+                    <div class="main-galery-column-block-comment ">
+                        <span class="main-galery-column-block-comment__title ">Роман Шмельков</span>
+                        <span class="main-galery-column-block-comment__mod-title ">/<br> Лидер</span>
+                        <p class="main-galery-column-block-comment__text ">
+                            Креатив - моё всё!<br> Мастер расставания с зависимостями,<br> и другим с этим помогу.<br> Продажи открывают двери!
+                        </p>
+
+                    </div>
+                </div>
+                <div class="main-galery-column-block ">
+                    <img class="main-galery-column-block__img " src="img/MAKAR.png " alt="women ">
+                    <div class="main-galery-column-block-comment ">
+                        <span class="main-galery-column-block-comment__title ">Дмитрий Макаров </span>
+                        <span class="main-galery-column-block-comment__mod-title ">/<br> Лидер</span>
+                        <p class="main-galery-column-block-comment__text ">
+                            Открыт всему новому.<br> Люблю риск, путешествия и музыку.
+                        </p>
+
+                    </div>
+                </div>
+                <p class="main-text-title__text-1 ">Мы ждем именно вас в Luck Look Company</p>
+
+            </div>
+
+
+
+
+
+
+    </main>
+    <footer class="footer" id="footer">
+        <div class="wrapper">
+            <h2 class="main-text-title__title">
+                <a name="contacts"> </a>Сделай первый шаг на пути к успеху!
+            </h2>
+            <p class="main-text-title__text">отправь нам своё резюме!</p>
+            <form class="footer-form" action="core/send.php" method="POST">
+                <div class="footer-form-block">
+                    <span class="footer-form-block__name">ФИО*</span>
+                    <input class="footer-form-block__input" type="text" name="name" required>
+                </div>
+                <div class="footer-form-block">
+                <span class="footer-form-block__name">E-mail*</span><input class="footer-form-block__input" name="email" type="email" required>
+            </div>
+         <div class="footer-form-block ">
+            <span class="footer-form-block__name">Тема*</span><input class="footer-form-block__input" name="theme" type="text" required>
+         </div>
+          <span class="footer-form-block__name">Сопроводительное письмо*</span>
+          <div class="footer-form-block mod-border">
+
+            <textarea class="footer-form-block__input" name="text" id=" " cols="30" rows="10">
+					</textarea>
+        </div>
+        <button name="button" class="footer-form-block__button">
+					Отправить
+				</button>
+       
+       
+       
+       
+            </form>
+          
+       
+            <div class="footer-address ">
+            <address class="footer-address__text ">	<br>
+					Адрес: в процессе<br> 
+					Телефон: +7 999 716-27-49<br>
+					<br><br>
+					Web <br>
+					E-mail: info@lucklookcompany.com
+				</address>
+            <div class="footer-address-map ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d18512.556753009656!2d30.721774253394045!3d46.39104922950296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1487624363907 " frameborder="0 " style="border:0 " allowfullscreen>
+					</iframe>
+            </div>
+        </div>
+        </div>
+        
+
+        <div class="footer-down ">
+            <span class="footer-down__title ">Подпишитесь</span>
+            <div>
+                <a class="footer-down__link " href="# "><i class="fa fa-twitter "></i></a>
+                <a class="footer-down__link " href="https://www.instagram.com/lucklookcompany/?igshid=ipfdmnyi8p8v "><i class="fa fa-instagram   " ></i></a>
+                <a class="footer-down__link " href="# "><i class="fa fa-vk " ></i></a>
+                <a class="footer-down__link " href="# "><i class="fa fa-facebook " ></i></a>
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+
+    <script type="text/javascript " src="js/jquery-3.1.1.min.js ">
+    </script>
+    <script type="text/javascript " src="js/jquery-migrate-3.0.0.min.js ">
+    </script>
+    <script type="text/javascript " src="slick-1.6.0/slick/slick.min.js ">
+    </script>
+    <script type="text/javascript " src="js/js.js ">
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.single-item').slick({
+                dots: true,
+                arrows: false,
+                autoplay: true
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.multiple-items').slick({
+                dots: true,
+                slidesToShow: 1,
+                slidesToScroll: 1
+
+
+            });
+        });
+    </script>
+
+    <script>
+        $('.header__link, .header__link-1').click(function() {
+            $('html, body').animate({
+                scrollTop: $("#footer").offset().top
+            }, 2000);
+        });
+    </script>
+
+</body>
+
+</html>
